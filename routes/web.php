@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return 'Please Visit <a href="/admin">Admin Page. Click Here</a>';
 });
+
+Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index']);
